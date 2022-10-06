@@ -1,0 +1,298 @@
+/*Header formatting*/
+body{
+    padding: 0 5vw;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3vw;  
+    padding-bottom: 56px;
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+}
+#logoName{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+#name{
+    font-weight: 600;
+}
+a{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding: 16px;
+    text-decoration: none;
+}
+#logo{
+    width:10vw;
+    padding-right: 16px;
+}
+#rectangle{
+    position: absolute;
+    right:8vw;
+    top:0%;
+    width:84vw;
+    height:70vh;
+    z-index: -1;
+}
+#rectangleMobile{
+    display:none;
+}
+/*Body formatting*/
+.body1{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+section, .myProjects, .mySkills{
+    padding: 0 3vw;  
+}
+button{
+    font-family: 'Nunito', sans-serif;
+    font-size: 32px;
+    background-color: #FFE599;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+}
+hr{
+    height: 8px;
+    background-color: #6D9EEB;
+    border: none;
+}
+.breakLine{
+    padding: 2vw 3vw;  
+}
+/*Hero formatting*/
+em{
+    font-style: italic;
+}
+.hero{
+    height: 408px;
+    display: grid;
+    padding-bottom: 56px;
+    grid-template-columns: 65% 35%;
+    grid-template-areas: 
+    "heroText imageBox";
+    position: relative;
+    /* background-image: url(images/desktop_hero_background.png); */
+    background-size: cover;
+}
+#heroText{
+    grid-area: heroText;
+    padding-left: 5vw;
+    padding-bottom: 24px;
+}
+#imageBox{
+    grid-area: imageBox;
+    padding-right: 120px;
+}
+#selfie{
+    height: 40vh;
+    position: absolute;
+    right:4vw;
+    bottom:5vh;
+ }
+#workButton{
+    position: absolute;
+    bottom: 19vh;
+}
+/*My Skills formatting*/
+.icon{
+    padding: 8px;
+    height: 44px;
+    width: 44px
+}
+.skillsText{
+    padding-left: 5vw;
+}
+#iconBox{
+    padding-right: 5vw;
+}
+#skillsContainer{
+    display:flex;
+    background-color: rgba(109, 158, 235, 0.3);
+    padding-bottom: 16px;
+    background-clip: padding-box;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+ui{
+    list-style: none;
+}
+.bullet1{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 8px;
+}
+.bullet2{
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    padding-bottom: 16px;
+    align-items: center;
+}
+.skillsIcons{
+    background-color: rgba(109, 158, 235, 0.3);
+    border-radius: 10px;
+    padding: 8px;
+    background-clip: padding-box;
+}
+/*My Projects formatting*/
+#projectsHeading{
+    padding-left: 5vw; 
+}
+.projectBox{
+    display:grid;
+    background-color:  rgba(109, 158, 235, 0.3);
+    border-radius: 10px;
+    margin-top: 16px;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: 
+    "projectPhoto projectText";
+    align-items:center;
+    padding:10px
+}
+
+.projectText{
+    padding-left: 16px;
+    grid-area: projectText;
+}
+
+h3{
+    font-family: 'Nunito', sans-serif;
+    font-weight:500;
+    font-size: 32px;
+}
+.projectHeading{
+    display: flex;
+    align-items:flex-start;
+}
+.projectPhoto{
+    height: 298px;
+    grid-area: projectPhoto;
+}
+.learnMore{
+    justify-content: flex-end;
+}
+/*Footer formatting*/
+footer{
+    padding-right: 120px;
+    padding-left: 120px;
+}
+
+.footerText{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+.socialIconsBar{
+    display: flex;
+    justify-content: center;
+}
+
+/*mobile screen styles*/
+@media only screen and (max-width: 600px){
+    /*text reformatting*/
+    h1{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 16px;;
+    }
+    .body1{
+        font-size: 14px;
+    }
+    button{
+        font-size: 20px;
+        background-color: #FFE599;
+        padding: 8px;
+    }
+    .bullet1{
+        font-size: 14px;
+    }
+    .bullet2{
+        font-size: 14px;
+    }
+    #rectangleMobile{
+        display: flex;
+        position: absolute;
+        right:8vw;
+        top:0%;
+        width:84vw;
+        height:70vh;
+        z-index: -1;
+    }
+    #rectangle{
+        display: none;
+    }
+    
+    .hero{
+        height: 386px;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: 
+        "heroText imageBox";
+        position: relative;
+        /* background-image: url(images/desktop_hero_background.png); */
+        background-size: cover;
+    }
+    #heroText{
+        grid-area: heroText;
+    }
+    #imageBox{
+        grid-area: imageBox;
+    }
+    #selfie{
+        right:2vw;
+        bottom:15vh;
+        height: 30vh;
+     }
+    #workButton{
+        position: absolute;
+        bottom: 9vh;
+    }
+    /*My Skillss Formatting*/
+    #skillsContainer{
+        display:flex;
+        flex-direction: column;
+    }
+    .skillsText{
+        padding: 0 2vw 16px;
+    }
+    #aboutmeButton{
+        display:flex;
+        justify-content: center;
+    }
+    #iconBox{
+        display: flex;
+        justify-content: center;
+    }
+    .icon{
+        height:28px;
+        width:28px;
+    }
+    /*My Projects Formatting*/
+    .projectBox{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .projectPhoto{
+        width:75vw;
+    }
+    .learnMore{
+        display:flex;
+        justify-content: center;
+}
