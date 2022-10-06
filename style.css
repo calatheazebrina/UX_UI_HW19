@@ -68,7 +68,7 @@ hr{
     border: none;
 }
 .breakLine{
-    padding: 2vw 3vw;  
+    padding: 6vw 3vw;  
 }
 /*Hero formatting*/
 em{
@@ -155,7 +155,7 @@ ui{
     display:grid;
     background-color:  rgba(109, 158, 235, 0.3);
     border-radius: 10px;
-    margin-top: 16px;
+    margin-top: 24px;
     grid-template-columns: 30% 70%;
     grid-template-areas: 
     "projectPhoto projectText";
@@ -168,6 +168,11 @@ ui{
     grid-area: projectText;
 }
 
+.projectPhoto{
+    width: 20vw;
+    grid-area: projectPhoto;
+}
+
 h3{
     font-family: 'Nunito', sans-serif;
     font-weight:500;
@@ -177,10 +182,7 @@ h3{
     display: flex;
     align-items:flex-start;
 }
-.projectPhoto{
-    height: 298px;
-    grid-area: projectPhoto;
-}
+
 .learnMore{
     justify-content: flex-end;
 }
