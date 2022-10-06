@@ -202,6 +202,22 @@ footer{
     justify-content: center;
 }
 
+.hover{
+    background-color: #FCD974;
+    box-shadow: 10px 10px 25%;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.click{
+    background-color: #FB9F4E;
+    box-shadow: 10px 10px 25% #FB9F4E; 
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+}
+
 /*mobile screen styles*/
 @media only screen and (max-width: 600px){
     /*text reformatting*/
@@ -295,4 +311,5 @@ footer{
     .learnMore{
         display:flex;
         justify-content: center;
+    }
 }
