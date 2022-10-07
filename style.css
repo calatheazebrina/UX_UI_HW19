@@ -32,20 +32,10 @@ a{
     text-decoration: none;
 }
 #logo{
-    width:10vw;
+    width:5vw;
     padding-right: 16px;
 }
-#rectangle{
-    position: absolute;
-    right:8vw;
-    top:0%;
-    width:84vw;
-    height:70vh;
-    z-index: -1;
-}
-#rectangleMobile{
-    display:none;
-}
+
 /*Body formatting*/
 .body1{
     font-family: 'Nunito', sans-serif;
@@ -56,11 +46,14 @@ section, .myProjects, .mySkills{
 }
 button{
     font-family: 'Nunito', sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     background-color: #FFE599;
-    border: none;
     padding: 16px;
     border-radius: 10px;
+    border-width: .1em;
+}
+.heroButton{
+    font-size: 32px;
 }
 hr{
     height: 8px;
@@ -75,46 +68,46 @@ em{
     font-style: italic;
 }
 .hero{
-    height: 408px;
+    background-color: #FFE599;
+    border-radius: 10px;
     display: grid;
     padding-bottom: 56px;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 40% 60%;
     grid-template-areas: 
     "heroText imageBox";
-    position: relative;
-    /* background-image: url(images/desktop_hero_background.png); */
-    background-size: cover;
+    align-items: center;
+}
+.heroHeading{
+    display: flex;
+    align-items: center;
 }
 #heroText{
     grid-area: heroText;
-    padding-left: 5vw;
-    padding-bottom: 24px;
-}
-#imageBox{
-    grid-area: imageBox;
-    padding-right: 120px;
+    margin-left: 5vw;
+    background-color: rgb(197.2,211.9,235);
+    border-radius: 10px;
+    padding:3vw;
 }
 #selfie{
-    height: 40vh;
-    position: absolute;
-    right:4vw;
-    bottom:5vh;
- }
-#workButton{
-    position: absolute;
-    bottom: 19vh;
+    width: 100%;
+    height: auto;
+
 }
+#imageBox{
+    height: 100%;
+    grid-area: imageBox;
+}
+
 /*My Skills formatting*/
 .icon{
     padding: 8px;
     height: 44px;
     width: 44px
 }
-.skillsText{
-    padding-left: 5vw;
-}
-#iconBox{
-    padding-right: 5vw;
+.myskillsHeading{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6vw;  
 }
 #skillsContainer{
     display:flex;
@@ -123,7 +116,8 @@ em{
     background-clip: padding-box;
     border-radius: 10px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 3vw 0px;
 }
 ui{
     list-style: none;
@@ -137,7 +131,7 @@ ui{
 .bullet2{
     display: flex;
     font-family: 'Nunito', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     padding-bottom: 16px;
     align-items: center;
 }
@@ -148,8 +142,12 @@ ui{
     background-clip: padding-box;
 }
 /*My Projects formatting*/
+
 #projectsHeading{
-    padding-left: 5vw; 
+    /* padding-left: 5vw;  */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6vw;  
 }
 .projectBox{
     display:grid;
@@ -161,16 +159,34 @@ ui{
     "projectPhoto projectText";
     align-items:center;
     padding:10px
+    
 }
 
 .projectText{
     padding-left: 16px;
     grid-area: projectText;
+    padding: 3vw 2vw;
 }
 
 .projectPhoto{
-    width: 20vw;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
     grid-area: projectPhoto;
+    width:100%;
+    height: 100%;
+}
+
+.animal{
+    background-image: url("./images/animal_smallphoto.png");
+}
+
+.doi{
+    background-image: url("./images/doi_smallphoto.png");
+}
+
+.skillfolio{
+    background-image: url("./images/photo_template.png");
 }
 
 h3{
@@ -221,7 +237,7 @@ footer{
 }
 
 /*mobile screen styles*/
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 900px){
     /*text reformatting*/
     h1{
         font-size: 20px;
@@ -237,50 +253,34 @@ footer{
         background-color: #FFE599;
         padding: 8px;
     }
+    .heroButton{
+        font-size: 20px; 
+    }
     .bullet1{
         font-size: 14px;
     }
     .bullet2{
         font-size: 14px;
-    }
-    #rectangleMobile{
-        display: flex;
-        position: absolute;
-        right:8vw;
-        top:0%;
-        width:84vw;
-        height:70vh;
-        z-index: -1;
-    }
-    #rectangle{
-        display: none;
-    }
-    
+    }  
     .hero{
-        height: 386px;
-        display: grid;
-        grid-template-columns: 40% 60%;
-        grid-template-areas: 
-        "heroText imageBox";
-        position: relative;
-        /* background-image: url(images/desktop_hero_background.png); */
-        background-size: cover;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #FFE599;
+        align-content: center;
     }
     #heroText{
         grid-area: heroText;
+        margin-right: 5vw;
     }
     #imageBox{
         grid-area: imageBox;
+    
     }
     #selfie{
-        right:2vw;
-        bottom:15vh;
-        height: 30vh;
-     }
-    #workButton{
-        position: absolute;
-        bottom: 9vh;
-    }
+    align-self: flex-start;
+    } 
+
     /*My Skillss Formatting*/
     #skillsContainer{
         display:flex;
@@ -309,6 +309,7 @@ footer{
     }
     .projectPhoto{
         width:75vw;
+        height: 300px;
     }
     .learnMore{
         display:flex;
